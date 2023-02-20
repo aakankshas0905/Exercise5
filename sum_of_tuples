@@ -1,0 +1,19 @@
+Create a list of tuples like ('a',1)('b',2)('a',3).Now get the sum of tuples which is having first value as 'a'?
+================================================================================================================
+Input = [('a',1), ('b',2), ('a',3)]
+ 
+Output = []
+x=[]
+for i in Input:
+    if i[0] not in x:
+        x.append(i[0])
+for i in x:
+    p=[]
+    p.append(i)
+    s=0
+    for j in Input:
+        if(j[0]==i):
+            s+=j[1]
+    p.append(s)
+    Output.append(tuple(p))
+print(Output)
